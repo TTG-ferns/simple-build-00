@@ -1,7 +1,6 @@
 pipeline {
     agent { 
       dockerfile true
-      label 'master-docker'
       }
     stages {
         stage('Test') {
