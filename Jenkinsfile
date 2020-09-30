@@ -1,9 +1,13 @@
 pipeline {
-    agent { label 'master' } 
+    agent { 
+      dockerfile true
+      label 'master'
+      }
     stages {
-        stage('Stage 1') {
+        stage('Test') {
             steps {
-                echo 'Hello world!' 
+                sh 'node --version'
+                sh 'svn --version'
             }
         }
     }
